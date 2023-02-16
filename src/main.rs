@@ -9,13 +9,24 @@
         - Returns win or lose
  */
 
- fn main() {
-    let x = Box::new(42);
+// mod pattern;
+
+// mod pattern;
+// mod lazy_hashmap;
+
+// use pattern::Pattern;
 
 
+// mod pattern;
+use crate::pattern::Pattern;
 
-    println!("{}", x);
+fn main() {
+    
+    let test1 = Pattern::new(["B".to_string(), "G".to_string(),"Y".to_string(), "R".to_string()]);
+    
+    let test2 = Pattern::new(['B'.to_string(), 'G'.to_string(), 'Y'.to_string(), 'R'.to_string()]);
+
+    
 }
-
 
 
