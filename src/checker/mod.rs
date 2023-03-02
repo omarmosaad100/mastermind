@@ -1,9 +1,9 @@
 
 mod checker;
-pub use checker::Checker;
+pub use checker::checker::Checker;
 
 mod hint;
-pub use hint::Hint;
+pub use self::hint::Hint;
 
 mod pattern;
-pub use pattern::Pattern;
+pub use self::pattern::Pattern;

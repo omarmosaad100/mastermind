@@ -3,6 +3,8 @@ use std::marker::PhantomData;
 
 use super::pattern::Pattern;
 
+#[derive(Clone)]
+
 pub struct Hint <T,const N: usize> 
 where 
     T: Eq + Hash + Clone

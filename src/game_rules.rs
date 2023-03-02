@@ -9,10 +9,12 @@
 
  */
 
- #[derive(Debug)]
+ #[derive(Clone, Debug)]
 pub enum TypeOfChoices {
     Colors,
 }
+
+#[derive(Clone)]
 
 pub struct GameRules {
     pub no_of_trials: i32,

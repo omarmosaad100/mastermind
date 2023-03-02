@@ -2,6 +2,7 @@
 use std::collections::HashMap;
 use std::hash::Hash;
 
+#[derive(Clone)]
 pub struct Pattern <T, const N: usize>
 where
     T: Eq + Hash + Clone
