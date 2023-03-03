@@ -5,7 +5,7 @@ use super::pattern::Pattern;
 
 #[derive(Clone)]
 
-pub struct Hint <T,const N: usize> 
+pub struct Hint <T> 
 where 
     T: Eq + Hash + Clone
 {
@@ -16,7 +16,7 @@ where
     phantom: PhantomData<T>
 }
 
-impl <T,const N: usize> Hint <T,N> 
+impl <T> Hint <T> 
 where 
     T: Eq + Hash + Clone
     {
@@ -29,7 +29,7 @@ where
             phantom: PhantomData
         }
     }
-    pub fn provide_hint(&mut self, truth: Pattern<T,N>, guess: Pattern<T,N>) {
+    pub fn provide_hint(&mut self, truth: Pattern<T>, guess: Pattern<T>) {
         let mut right_guess = 0;
         let mut wrong_place = 0;
         let mut right_indices = Vec::new();

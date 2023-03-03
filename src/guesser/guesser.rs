@@ -39,7 +39,21 @@ impl Guesser {
     }
 
     fn filter (&self, pred : Vec<String>) ->  bool {
-        return pred.len() == (self.game_rules.pattern_size as usize);
+        let mut checkFlag = false;
+
+        if pred.len() == (self.game_rules.pattern_size as usize)
+        {
+            checkFlag = true;
+        }
+
+        for i in 0..pred.len()
+        {
+            if !self.game_rules.choices.contains(&pred[i])
+            {
+                return false;
+            }
+        }
+        checkFlag
     }
 
 }
